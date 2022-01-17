@@ -1,0 +1,31 @@
+<div class="full">
+  <div class="calculadora">
+    <input [(ngModel)]="val" type="text" />
+    <div class="div1">
+      <button class="button1" *ngFor="let button of buttons1" (click)="calc(button)">
+        {{ button }}
+      </button>
+    </div>
+    <div class="div2">
+      <button *ngFor="let button1 of buttons2" (click)="calc(button1)">
+        <span *ngIf="button1 === '*'">x</span>
+        <span *ngIf="button1 !== '*'">{{ button1 }}</span>
+      </button>
+    </div>
+    <div class="div2">
+      <button *ngFor="let button2 of buttons3" (click)="calc(button2)">
+        {{ button2 }}
+      </button>
+    </div>
+    <div class="div2">
+      <button *ngFor="let button3 of buttons4" (click)="calc(button3)">
+        {{ button3 }}
+      </button>
+    </div>
+    <div class="div3">
+      <button *ngFor="let button4 of buttons5" (click)="calc(button4)">
+        {{ button4 }}
+      </button>
+    </div>
+  </div>
+</div>
